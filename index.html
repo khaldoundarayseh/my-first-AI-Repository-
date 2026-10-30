@@ -4,336 +4,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0b1020">
-<meta name="description" content="الموقع الشخصي والأعمال والمشاريع والمهارات.">
-<title>اسمي هنا | الموقع الشخصي</title>
+<meta name="theme-color" content="#090909">
+<meta name="description" content="جود الدرايسة - مصممة ألعاب">
+<title>جود الدرايسة | مصممة ألعاب</title>
 
 <style>
-:root {
-  --bg: #0b1020;
-  --panel: #121a30;
-  --text: #f5f7ff;
-  --muted: #a7b0c5;
-  --blue: #60a5fa;
-  --purple: #a78bfa;
-  --border: rgba(255,255,255,.10);
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#090909;
+  color:#f8f5ed;
+  font-family:Tahoma,Arial,sans-serif;
+  line-height:1.9
+}
+:root{--gold:#d4af37;--muted:#aaa49a;--card:#171717}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1100px;margin:auto}
+
+header{
+  position:sticky;top:0;z-index:10;
+  background:#090909ee;
+  border-bottom:1px solid #d4af3733
+}
+.nav{
+  min-height:75px;display:flex;
+  justify-content:space-between;align-items:center
+}
+.logo{color:var(--gold);font-size:22px;font-weight:bold}
+nav{display:flex;gap:25px}
+nav a{color:#bbb;font-size:14px}
+nav a:hover{color:var(--gold)}
+.menu{
+  display:none;background:none;color:var(--gold);
+  border:1px solid var(--gold);padding:6px 12px;
+  border-radius:7px;font-size:22px
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.hero{
+  min-height:570px;display:flex;align-items:center;
+  background:radial-gradient(ellipse at 15% 50%,#8b6b241e,transparent 55%)
+}
+.hero-content{padding:90px 0;max-width:750px}
+.tag{color:var(--gold);font-size:14px;letter-spacing:2px}
+h1{font-size:clamp(40px,7vw,70px);line-height:1.4;margin:18px 0}
+h1 span{color:var(--gold)}
+.hero h2{color:#dfd1a8;font-size:24px;font-weight:normal}
+.hero p{color:var(--muted);margin:20px 0 30px}
+.btn{
+  display:inline-block;padding:11px 24px;
+  border-radius:6px;margin-left:8px;
+  transition:.3s;font-weight:bold
+}
+.btn:hover{transform:translateY(-3px)}
+.gold{background:var(--gold);color:#111}
+.outline{border:1px solid var(--gold);color:var(--gold)}
+
+.profile{
+  width:190px;height:190px;border-radius:50%;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#d4af37,#72531c);
+  color:#111;font-size:65px;font-weight:bold;
+  border:6px solid #ffffff12;
+  box-shadow:0 0 55px #d4af3730;
+  margin:40px auto
 }
 
-html {
-  scroll-behavior: smooth;
+section{padding:75px 0}
+.heading{text-align:center;margin-bottom:38px}
+.heading small{color:var(--gold);letter-spacing:2px}
+.heading h2{font-size:32px;margin:8px 0}
+.heading p{color:var(--muted)}
+.line{height:2px;width:55px;background:var(--gold);margin:12px auto}
+
+.about{
+  background:var(--card);border:1px solid #d4af3733;
+  padding:30px;border-radius:12px;
+  text-align:center;color:#c1bdb3
 }
 
-body {
-  font-family: Tahoma, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.8;
+.skills,.projects{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:18px
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+.skill,.project{
+  background:var(--card);padding:25px;
+  border:1px solid #d4af3733;border-radius:10px;
+  text-align:center;transition:.3s
 }
-
-.container {
-  width: min(1100px, 90%);
-  margin: auto;
+.skill:hover,.project:hover{
+  transform:translateY(-5px);border-color:var(--gold)
 }
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(11,16,32,.94);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(15px);
+.skill .icon,.project .number{
+  color:var(--gold);font-size:30px
 }
+.skill h3,.project h3{margin:8px 0;color:#f1dfaa}
+.project p{color:var(--muted);font-size:14px}
 
-.nav {
-  min-height: 75px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+.contact{
+  background:linear-gradient(135deg,#201b0e,#151515);
+  border:1px solid #d4af3744;
+  padding:40px 20px;border-radius:14px;text-align:center
 }
+.contact h2{color:var(--gold)}
+.contact p{color:var(--muted);margin:15px 0 25px}
 
-.brand {
-  font-size: 21px;
-  font-weight: bold;
-  color: var(--blue);
+footer{
+  padding:25px;text-align:center;
+  color:var(--muted);border-top:1px solid #ffffff15;
+  font-size:13px
 }
+footer span{color:var(--gold)}
 
-nav {
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-nav a {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: white;
-}
-
-.menu-toggle {
-  display: none;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  color: white;
-  border-radius: 10px;
-  padding: 8px 13px;
-  font-size: 20px;
-}
-
-.hero {
-  padding: 105px 0 90px;
-  background:
-    radial-gradient(ellipse at 15% 20%, #263b773d, transparent 45%),
-    radial-gradient(ellipse at 85% 80%, #713f9430, transparent 40%);
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.3fr .7fr;
-  align-items: center;
-  gap: 55px;
-}
-
-.eyebrow {
-  color: var(--blue);
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-
-h1 {
-  font-size: clamp(36px, 6vw, 60px);
-  line-height: 1.3;
-  margin-bottom: 12px;
-}
-
-h1 span {
-  background: linear-gradient(90deg, var(--blue), var(--purple));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.hero h2 {
-  color: var(--muted);
-  font-size: 22px;
-  font-weight: normal;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  color: var(--muted);
-  max-width: 560px;
-  margin-bottom: 30px;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 23px;
-  border-radius: 12px;
-  font-weight: bold;
-  transition: .2s;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-}
-
-.primary {
-  background: linear-gradient(110deg, #3b82f6, #8b5cf6);
-  color: white;
-}
-
-.secondary {
-  border: 1px solid var(--border);
-  color: white;
-}
-
-.profile {
-  width: 260px;
-  height: 260px;
-  margin: auto;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 85px;
-  font-weight: bold;
-  color: white;
-  background: linear-gradient(135deg, #2563eb, #9333ea);
-  border: 8px solid rgba(255,255,255,.08);
-  box-shadow: 0 0 75px #6366f155;
-}
-
-section {
-  padding: 75px 0;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.section-title h2 {
-  font-size: 32px;
-  margin-bottom: 8px;
-}
-
-.section-title p {
-  color: var(--muted);
-}
-
-.about-box {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  padding: 30px;
-  border-radius: 20px;
-  color: var(--muted);
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-}
-
-.skill {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  padding: 12px 22px;
-  border-radius: 12px;
-  color: var(--blue);
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.project {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 25px;
-  transition: .2s;
-}
-
-.project:hover {
-  transform: translateY(-5px);
-  border-color: var(--blue);
-}
-
-.project .number {
-  color: var(--purple);
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.project h3 {
-  margin: 12px 0;
-}
-
-.project p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.contact-box {
-  background: linear-gradient(135deg, #172b52, #30204d);
-  border: 1px solid var(--border);
-  border-radius: 22px;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.contact-box p {
-  color: #d0d8ed;
-  margin: 12px 0 25px;
-}
-
-footer {
-  border-top: 1px solid var(--border);
-  padding: 25px 0;
-  text-align: center;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-@media (max-width: 750px) {
-  .menu-toggle {
-    display: block;
+@media(max-width:750px){
+  .menu{display:block}
+  nav{
+    display:none;position:absolute;top:75px;
+    right:5%;left:5%;padding:20px;
+    background:#171717;border:1px solid #d4af3744;
+    border-radius:10px;flex-direction:column;gap:15px
   }
-
-  nav {
-    display: none;
-    position: absolute;
-    top: 75px;
-    right: 5%;
-    left: 5%;
-    padding: 20px;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 15px;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 15px;
-  }
-
-  nav.open {
-    display: flex;
-  }
-
-  .hero {
-    padding: 65px 0;
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero p {
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .buttons {
-    justify-content: center;
-  }
-
-  .profile {
-    width: 190px;
-    height: 190px;
-    font-size: 65px;
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
-  }
-
-  section {
-    padding: 55px 0;
-  }
+  nav.open{display:flex}
+  .hero{min-height:auto}
+  .hero-content{padding:65px 0;text-align:center}
+  .profile{width:145px;height:145px;font-size:48px}
+  .skills{grid-template-columns:repeat(2,1fr)}
+  .projects{grid-template-columns:1fr}
+  section{padding:55px 0}
 }
 </style>
 </head>
@@ -342,12 +138,9 @@ footer {
 
 <header>
   <div class="container nav">
-    <a href="#home" class="brand">اسمي هنا</a>
-
-    <button class="menu-toggle" id="menuToggle"
-      aria-label="فتح القائمة" aria-expanded="false">☰</button>
-
-    <nav id="navLinks">
+    <a class="logo" href="#home">جود الدرايسة</a>
+    <button class="menu" id="menuBtn" aria-label="القائمة">☰</button>
+    <nav id="navigation">
       <a href="#home">الرئيسية</a>
       <a href="#about">من أنا</a>
       <a href="#skills">مهاراتي</a>
@@ -360,116 +153,129 @@ footer {
 <main>
 
 <section class="hero" id="home">
-  <div class="container hero-grid">
+  <div class="container hero-content">
+    <div class="tag">✦ الإبداع يبدأ من فكرة</div>
 
-    <div>
-      <div class="eyebrow">✦ مرحباً بك في موقعي الشخصي</div>
+    <div class="profile">JD</div>
 
-      <h1>أنا <span>اسمي هنا</span></h1>
+    <h1>أنا <span>جود الدرايسة</span></h1>
 
-      <h2>اكتب تخصصك أو مهنتك هنا</h2>
+    <h2>مصممة ألعاب Game Designer</h2>
 
-      <p>
-        أهلاً بك في موقعي الشخصي.
-        هنا أشارك نبذة عني ومهاراتي وأعمالي
-        ومشاريعي التي أعمل عليها.
-      </p>
+    <p>
+      أهلاً بك في عالمي الإبداعي.
+      أهتم بتصميم الألعاب وتطوير الأفكار
+      وصناعة تجارب تفاعلية تجمع بين
+      الخيال والإبداع والتقنية.
+    </p>
 
-      <div class="buttons">
-        <a href="#projects" class="btn primary">شاهد أعمالي</a>
-        <a href="#contact" class="btn secondary">تواصل معي</a>
-      </div>
-    </div>
-
-    <div>
-      <div class="profile">م</div>
-    </div>
-
+    <a href="#projects" class="btn gold">اكتشف أعمالي</a>
+    <a href="#contact" class="btn outline">تواصل معي</a>
   </div>
 </section>
 
 <section id="about">
   <div class="container">
-    <div class="section-title">
+    <div class="heading">
+      <small>ABOUT ME</small>
       <h2>من أنا؟</h2>
-      <p>تعرف عليّ أكثر</p>
+      <div class="line"></div>
+      <p>تعرف على جود الدرايسة</p>
     </div>
 
-    <div class="about-box">
-      أنا شخص مهتم بالتطوير والتعلم والعمل على
-      مشاريع جديدة. أسعى دائماً إلى اكتساب
-      مهارات جديدة وتحويل الأفكار إلى نتائج
-      ومشاريع حقيقية.
-
-      <br><br>
-
-      يمكنك تعديل هذا النص وإضافة معلوماتك
-      الشخصية وخبراتك وأهدافك.
+    <div class="about">
+      أنا جود الدرايسة، مصممة ألعاب شغوفة
+      بالإبداع والخيال وصناعة التجارب التفاعلية.
+      أؤمن أن كل لعبة تبدأ بفكرة مميزة،
+      وأن التصميم الجيد يحول هذه الفكرة
+      إلى تجربة ممتعة لا تُنسى.
     </div>
   </div>
 </section>
 
 <section id="skills">
   <div class="container">
-    <div class="section-title">
-      <h2>مهاراتي</h2>
-      <p>المهارات التي أعمل على تطويرها</p>
+    <div class="heading">
+      <small>MY SKILLS</small>
+      <h2>مجالات اهتمامي</h2>
+      <div class="line"></div>
+      <p>المجالات التي أعمل على تطويرها</p>
     </div>
 
     <div class="skills">
-      <div class="skill">التواصل</div>
-      <div class="skill">حل المشكلات</div>
-      <div class="skill">الإبداع</div>
-      <div class="skill">إدارة المشاريع</div>
-      <div class="skill">التعلم المستمر</div>
-      <div class="skill">الذكاء الاصطناعي</div>
+      <div class="skill">
+        <div class="icon">🎮</div>
+        <h3>تصميم الألعاب</h3>
+      </div>
+
+      <div class="skill">
+        <div class="icon">💡</div>
+        <h3>تطوير الأفكار</h3>
+      </div>
+
+      <div class="skill">
+        <div class="icon">🎨</div>
+        <h3>التصميم الإبداعي</h3>
+      </div>
+
+      <div class="skill">
+        <div class="icon">🌍</div>
+        <h3>تصميم العوالم</h3>
+      </div>
+
+      <div class="skill">
+        <div class="icon">🧩</div>
+        <h3>تصميم المراحل</h3>
+      </div>
+
+      <div class="skill">
+        <div class="icon">✨</div>
+        <h3>الخيال والابتكار</h3>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="projects">
   <div class="container">
-    <div class="section-title">
+    <div class="heading">
+      <small>MY PORTFOLIO</small>
       <h2>أعمالي ومشاريعي</h2>
-      <p>بعض المشاريع التي أعمل عليها</p>
+      <div class="line"></div>
+      <p>مساحة لعرض إبداعاتي في تصميم الألعاب</p>
     </div>
 
     <div class="projects">
-
       <div class="project">
         <div class="number">01</div>
-        <h3>مشروعي الأول</h3>
-        <p>اكتب هنا وصفاً مختصراً لمشروعك الأول.</p>
+        <h3>مشروع لعبة أول</h3>
+        <p>سيتم إضافة تفاصيل المشروع وصوره هنا.</p>
       </div>
 
       <div class="project">
         <div class="number">02</div>
-        <h3>مشروعي الثاني</h3>
-        <p>اكتب هنا وصفاً مختصراً لمشروعك الثاني.</p>
+        <h3>تصميم عالم لعبة</h3>
+        <p>سيتم إضافة تفاصيل التصميم هنا.</p>
       </div>
 
       <div class="project">
         <div class="number">03</div>
-        <h3>مشروعي الثالث</h3>
-        <p>اكتب هنا وصفاً مختصراً لمشروعك الثالث.</p>
+        <h3>فكرة لعبة جديدة</h3>
+        <p>سيتم إضافة تفاصيل الفكرة هنا.</p>
       </div>
-
     </div>
   </div>
 </section>
 
 <section id="contact">
   <div class="container">
-    <div class="contact-box">
-      <h2>هل تريد التواصل معي؟</h2>
-
+    <div class="contact">
+      <h2>لنتواصل ونصنع شيئاً مميزاً</h2>
       <p>
-        يسعدني التواصل معك والتعرف على أفكار
-        ومشاريع وفرص تعاون جديدة.
+        يسعدني التعرف على أفكار جديدة
+        وفرص التعاون في عالم تصميم الألعاب.
       </p>
-
-      <a class="btn primary"
-         href="mailto:your-email@example.com">
+      <a href="mailto:YOUR_EMAIL@example.com" class="btn gold">
         أرسل لي رسالة ✉
       </a>
     </div>
@@ -479,25 +285,21 @@ footer {
 </main>
 
 <footer>
-  <div class="container">
-    جميع الحقوق محفوظة ©
-    <span id="year"></span> | اسمي هنا
-  </div>
+  © <span id="year"></span>
+  جميع الحقوق محفوظة | <span>جود الدرايسة</span>
 </footer>
 
 <script>
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+const menuBtn = document.getElementById("menuBtn");
+const navigation = document.getElementById("navigation");
 
-menuToggle.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", isOpen);
+menuBtn.addEventListener("click", () => {
+  navigation.classList.toggle("open");
 });
 
-navLinks.querySelectorAll("a").forEach(link => {
+navigation.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
+    navigation.classList.remove("open");
   });
 });
 
